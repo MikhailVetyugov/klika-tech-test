@@ -1,0 +1,248 @@
+body {
+    font-family: 'Arial';
+}
+
+.app-container {
+    text-align: center;
+}
+
+.button a {
+    outline: 0;
+    font-size: 11px;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: black;
+    background-color: #ECF0F1;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+
+    border: 1px solid #c9cdce;
+    border-radius: 12px;
+    box-shadow: 0 0 3px gray;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.button a.selected {
+    background-color: #c9cdce;
+}
+
+.button a:hover {
+    cursor: pointer;
+    background-color: #c9cdce;
+}
+
+
+/* Table */
+
+.playlist-table {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 65%;
+}
+
+@media (max-width: 1024px) {
+    .playlist-table {
+        min-width: 100%;
+    }
+}
+
+.playlist-table-header, .filter-header {
+	padding: 5px 0px;
+	font-size: 20px;
+    text-align: left;
+    color: #777;
+}
+
+.playlist-table table {
+    border-collapse: collapse;
+    font-weight: bold;
+    width: 100%;
+    position: relative;
+}
+
+.playlist-table table, th, td {
+    border: 1px solid #c9cdce;
+	padding: 10px 5px 10px 20px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.playlist-table th {
+	background: #ECF0F1;
+	color: #2B2E2F;
+	font-size: 14px;
+}
+
+.playlist-table th:first-child {
+    width: 33%;
+}
+
+.playlist-table td {
+    color: #777;
+}
+
+.playlist-table .sort-icon {
+    background: url('icons/sort_icon.png') no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+.playlist-table .sort-icon.asc {
+    background: url('icons/sort_icon_asc.png') no-repeat;
+    background-size: cover;
+}
+
+.playlist-table .sort-icon.desc {
+    background: url('icons/sort_icon_desc.png') no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 500px) {
+    .playlist-table th {
+        text-align: center;
+        padding: 10px 5px;
+    }
+
+    .playlist-table .sort-icon {
+        float: none;
+        margin: 0 auto;
+    }
+}
+
+.playlist-table .sort-icon:hover {
+    cursor: pointer;
+}
+
+.playlist-table td {
+	font-size: 14px;
+}
+
+/* Navigation */
+
+.navigation {
+    margin: 10px auto 0px;
+    width: 300px;
+    text-align: center;
+}
+
+.navigation .page-number-button {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.navigation .page-number-button + .page-number-button {
+    margin-left: 5px;
+}
+
+.navigation .page-number-button.arrow {
+    font-size: 36px;
+    color: #c9cdce;
+
+    /* TODO: Use Less to avoid duplication. */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.navigation .page-number-button.arrow:hover {
+    cursor: pointer;
+    color: #ECF0F1;
+}
+
+.navigation .page-number-button.arrow:active {
+    cursor: pointer;
+    color: #c9cdce;
+}
+
+.navigation .page-number-button.to-start a, .navigation .page-number-button.to-end a {
+    vertical-align: top;
+}
+
+.navigation .pages-count {
+    color: #c9cdce;
+    font-weight: bold;
+}
+
+/* Page size buttons */
+
+.page-size-buttons-block {
+    margin: 10px 0px 0px;
+    float: right;
+}
+
+@media (max-width: 500px) {
+    .page-size-buttons-block {
+        float: none;
+        text-align: right;
+    }
+}
+
+.page-size-button {
+    display: inline-block;
+}
+
+.page-size-button a {
+    border-radius: 0;
+    border-width: 0;
+    box-shadow: 1px 0 0 0 #c9cdce,
+                0 1px 0 0 #c9cdce,
+                1px 1px 0 0 #c9cdce,
+                1px 0 0 0 #c9cdce inset,
+                0 1px 0 0 #c9cdce inset;
+
+}
+
+/* Filter */
+
+.filter {
+    margin: 0px 16px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+@media (max-width: 1024px) {
+    .filter {
+        display: block;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+}
+
+.filter-body {
+    background: #ECF0F1;
+    padding: 10px;
+}
+
+.filter-dropdown + .filter-dropdown {
+   margin-top: 10px;
+}
+
+.filter-dropdown-label {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 3px 0px;
+    text-align: left;
+}
+
+.filter-dropdown select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid black;
+    color: #777;
+}
+
+.filter-dropdown select option {
+    font-size: 14px;
+}
